@@ -3,8 +3,11 @@ extends layout
 block content
   h1= title
   a(href="/new")= "Enter New Message"
-  div
+  main
     each obj in messages
       ul
         each val, key in obj
-          li= key + ": " + val
+          li
+            span(class="key")= key + ": "
+            span(class="val")= val
+      hr

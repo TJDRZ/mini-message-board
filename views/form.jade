@@ -4,7 +4,7 @@ block content
     h1= title
     form(method="POST" action="/new")
         label(for="author")= "Author: "
-        input(name="author" type="text")
+            input(name="author" type="text" required maxlength=20 placeholder="Max 20 characters")
         label(for="msg")= "Message: " 
-        input(name="msg" type="text")
+            input(name="msg" type="text" required maxlength=50 placeholder="Max 50 characters")
         button(type="submit")= "Submit"

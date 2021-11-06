@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  a(href="/new")= "Enter New Message"
+  div
+    each obj in messages
+      ul
+        each val, key in obj
+          li= key + ": " + val
